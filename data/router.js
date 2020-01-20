@@ -30,7 +30,7 @@ router.get('/', (req,res)=>{
 router.put('/:id',(req,res)=>{
     const id = req.params.id
      const changes= req.body
-     console.log(`8===D ${changes}`)
+     console.log(`READ ME> ${changes}`)
      Db.update(id, changes)
            .then(acct => {
                  console.log(acct)

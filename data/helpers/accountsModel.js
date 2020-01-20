@@ -19,10 +19,10 @@ function insert (account){
     .then(ids => ({ id: ids[0] }));
 }
 
-function update(id, account){
-    return db('users')
-    .where('id', Number(id))
-    .update(account);
+function update(id, changes){
+    return db('accounts')
+    .where({id : id})
+    .update(changes);
 }
 
 function remove(id){
